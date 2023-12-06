@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1 class="text-center">Quản Lý Sinh Viên</h1>
+        <main>
+            <form class="form-sinh-vien">
+                <!-- Input Thông Tin -->
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label class="form-label" for="msv">Mã Sinh Viên:</label>
+                            <input name="maSinhVien" id="msv" type="text" class="form-control"
+                                placeholder="Mã sinh viên">
+
+                            <!-- <span class="form-message">Error</span> -->
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email:</label>
+                            <input id="email" type="email" class="form-control" placeholder="Mã sinh viên">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="ngaySinh">Ngày Sinh:</label>
+                            <input id="ngaySinh" type="date" class="form-control" placeholder="Mã sinh viên">
+                        </div>
+
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label class="form-label" for="tsv">Tên Sinh Viên:</label>
+                            <input id="tsv" type="text" class="form-control" placeholder="Mã sinh viên">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="matKhau">Mật Khẩu:</label>
+                            <input id="matKhau" type="password" class="form-control" placeholder="Mã sinh viên">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="khoaHoc">Khóa học:</label>
+                            <select id="khoaHoc" class="form-select">
+                                <option value="" selected>Hãy chọn khóa học</option>
+                                <option value="kh001">KH001</option>
+                                <option value="kh002">KH002</option>
+                                <option value="kh002">KH003</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Input Điểm -->
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label class="form-label" for="toan">Điểm Toán:</label>
+                            <input id="toan" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label class="form-label" for="ly">Điểm Lý:</label>
+                            <input id="ly" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label class="form-label" for="hoa">Điểm Hóa:</label>
+                            <input id="hoa" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-success tsv">Thêm Sinh Viên</button>
+                </div>
+            </form>
+
+            <div class="mb-3">
+                <label class="form-label" for="tim-kiem-sv">Tìm kiếm sinh viên:</label>
+                <div class="d-flex gap-4">
+                    <input id="tim-kiem-sv" type="text" class="form-control">
+                    <button class="btn btn-primary flex-shrink-0 search">Tìm kiếm</button>
+                </div>
+            </div>
+
+
+            <table class="table mt-5 table-sinh-vien">
+                <thead>
+                    <tr>
+                        <th scope="col">Mã sinh viên</th>
+                        <th scope="col">Tên sinh viên</th>
+                        <th scope="col">Ngày sinh</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Khóa học</th>
+                        <th scope="col">Điểm trung bình</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- JS -->
+
+    <!-- Model -->
+    <!-- tao bien fullName -->
+    <script src="./src/model/sinh-vien.js"></script>
+    <script src="./src/model/list-sinh-vien.js"></script>
+
+    <!-- Main -->
+    <!-- su dung fullName -->
+    <script src="./src/index.js"></script>
+
+    <script src="./src/regex.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.input-group
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+    .valid-feedback
+  ):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-radius: 0.375rem !important;
+}
+
+.form-message{
+  color: red;
+  font-size: 14px;
+}
